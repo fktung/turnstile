@@ -1,13 +1,14 @@
 # | py -3 -m json.tool
 import requests
 import json
-pin=4
+pinIn=4
+pinOut=17
 import RPi.GPIO as GPIO
 import time
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(pin, GPIO.OUT)
+GPIO.setup(pinIn, GPIO.OUT)
 
 while True:
     try:
@@ -23,10 +24,10 @@ while True:
         if rfidMember == '^C' or rfidMember == 'exit':
             break
         elif memberData['member']:
-            GPIO.output(pin, False)
+            GPIO.output(pinIn, False)
             print('on')
             time.sleep(1)
-            GPIO.output(pin, True)
+            GPIO.output(pinIn, True)
             print('off')
             time.sleep(0.3)
             print('RFID Terdaftar')
