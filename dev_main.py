@@ -21,10 +21,10 @@ while True:
         memberData = response.json()
         memberJson = json.load(memberData)
 
-        print(memberJson['open'])
+        print(memberJson["open"])
         if rfidMember == '^C' or rfidMember == 'exit':
             break
-        elif memberJson['open'] == OUT:
+        elif memberJson["open"] == OUT:
             GPIO.output(pinOut, False)
             print('on')
             time.sleep(1)
@@ -33,7 +33,7 @@ while True:
             time.sleep(0.3)
             print('RFID Terdaftar')
             continue
-        elif memberJson['open'] == IN:
+        elif memberJson["open"] == IN:
             GPIO.output(pinIn, False)
             print('on')
             time.sleep(1)
