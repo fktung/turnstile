@@ -22,7 +22,7 @@ while True:
         #memberJson = json.load(memberData)
 
         #print(memberJson["open"])
-        if rfidMember == '^C' or rfidMember == 'exit':
+        if rfidMember == 'EXIT' or rfidMember == 'exit':
             break
         elif memberData["open"] == OUT:
             GPIO.output(pinOut, False)
@@ -47,5 +47,6 @@ while True:
             continue
     except:
         print("error")
+        break
 #KeyboardInterrupt(False)
 GPIO.cleanup()
