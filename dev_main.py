@@ -9,6 +9,7 @@ import time
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(pinIn, GPIO.OUT)
+GPIO.setup(pinOut, GPIO.OUT)
 
 while True:
     try:
