@@ -20,7 +20,7 @@ while True:
 
         memberData = response.json()
 
-        print(dataReq)
+        print(memberData)
         if rfidMember == '^C' or rfidMember == 'exit':
             break
         elif memberData['open'] == OUT:
