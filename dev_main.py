@@ -32,7 +32,7 @@ while True:
             GPIO.output(pinOut, True)
             print('off')
             time.sleep(0.3)
-            print('RFID Terdaftar')
+            print(memberData)
             continue
         elif memberData["open"] == "IN":
             GPIO.output(pinIn, False)
@@ -41,7 +41,7 @@ while True:
             GPIO.output(pinIn, True)
             print('off')
             time.sleep(0.3)
-            print('RFID Terdaftar')
+            print(memberData)
             continue
         else:
             print('RFID Tidak terdaftar')
