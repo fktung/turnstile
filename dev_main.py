@@ -19,9 +19,9 @@ while True:
         # print(json.dumps(response.json()))
 
         memberData = response.json()
-        memberJson = json.load(memberData)
+#         memberJson = json.load(memberData)
 
-        print(memberJson["open"])
+#         print(memberJson["open"])
         if rfidMember == 'EXIT' or rfidMember == 'exit':
             break
         elif memberData["open"] == OUT:
