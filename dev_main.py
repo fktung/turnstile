@@ -46,7 +46,8 @@ while True:
             print('RFID Tidak terdaftar')
             continue
     except:
-        print("error")
+        print("error turnstile")
+        print(error)
         break
 #KeyboardInterrupt(False)
 GPIO.cleanup()
