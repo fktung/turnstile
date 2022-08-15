@@ -34,7 +34,7 @@ while True:
             GPIO.output(pinOut, True)
             print('off')
             time.sleep(0.3)
-            print(memberData)
+            print('Staff')
             continue
         elif memberData["open"] == "OUT":
             GPIO.output(pinOut, False)
