@@ -25,7 +25,7 @@ while True:
 #         print(memberJson["open"])
         if rfidMember == 'EXIT' or rfidMember == 'exit':
             break
-        if rfidMember == 'StaffUrban123':
+        if rfidMember == 'StaffUrban1234':
             GPIO.output(pinIn, False)
             GPIO.output(pinOut, False)
             print('on')
