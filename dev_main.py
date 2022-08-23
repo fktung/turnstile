@@ -59,7 +59,7 @@ while True:
             continue
     except:
         print("error turnstile")
-        print(error)
-#         break
+#        print(error)
+#        break
 #KeyboardInterrupt(False)
 GPIO.cleanup()
