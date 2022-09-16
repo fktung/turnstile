@@ -1,4 +1,4 @@
-# | py -3 -m json.tool
+club=1  ##> Ganti Code club sesuai club
 import requests
 import json
 pinIn=17
@@ -14,7 +14,7 @@ GPIO.setup(pinOut, GPIO.OUT)
 while True:
     try:
         rfidMember = input("RFID = ")
-        dataReq = {"rfid": rfidMember}
+        dataReq = {"rfid": rfidMember, "branch_id": club}
         response = requests.post("http://dev-web.urbanathletes.co.id/api/turnstile", data=dataReq)
         # print(response.json())
         # print(json.dumps(response.json()))
