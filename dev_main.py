@@ -15,7 +15,8 @@ while True:
     try:
         rfidMember = input("RFID = ")
         dataReq = {"rfid": rfidMember, "branch_id": club}
-        response = requests.post("http://dev-web.urbanathletes.co.id/api/turnstile", data=dataReq)
+        # response = requests.post("http://dev-web.urbanathletes.co.id/api/turnstile", data=dataReq)
+        response = requests.post("https://fwapp.fitnessworks.co.id/api/member/check-in", data=dataReq)
         # print(response.json())
         # print(json.dumps(response.json()))
 
